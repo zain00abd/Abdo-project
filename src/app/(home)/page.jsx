@@ -15,7 +15,7 @@ const Page = () => {
   const [arrinv, setarrinv] = useState(0);
   const [dataa, setdata] = useState([]);
   const [dataSearch, setdataSearch] = useState([]);
-  const [idcustomer, setidcustomer] = useState(null);
+  const [nameuser, setnameuser] = useState(null);
   const [items, setiteams] = useState([]);
   const [tatalarr, settatalarr] = useState(null);
   const [date, setdate] = useState(null);
@@ -42,8 +42,8 @@ const Page = () => {
 
   useEffect(() => {
     if (status == "authenticated") {
-      setidcustomer(session.user.name.split("lzx1")[0]);
-      console.log(idcustomer);
+      setnameuser(session.user.name);
+      console.log(nameuser);
     }
   }, [status]);
 
@@ -141,7 +141,7 @@ const Page = () => {
       addItem();
     };
 
-    if (idcustomer) {
+    if (nameuser) {
       console.log("hoooommeeee");
     }
     getData();
@@ -254,7 +254,7 @@ const Page = () => {
       {
         discraption: arrdis,
         money: arrmon,
-        user: "useeeeeeeer",
+        user: nameuser,
         time: oclock,
       },
     ];
@@ -275,7 +275,7 @@ const Page = () => {
           {
             discraption: arrdis,
             money: arrmon,
-            user: "useeeeeeeer",
+            user: nameuser,
             time: oclock,
           },
         ],

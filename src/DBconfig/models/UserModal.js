@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
  });
 
  // Create a model based on that schema
- const UserModal = models.userinvoice || mongoose.model("userinvoice", productSchema);
+ const UserModal = models.userabdo || mongoose.model("userabdo", productSchema);
 
  // export the model
  module.exports = UserModal;
