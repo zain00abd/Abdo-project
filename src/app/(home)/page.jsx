@@ -19,6 +19,9 @@ const Page = () => {
   const [items, setiteams] = useState([]);
   const [tatalarr, settatalarr] = useState(null);
   const [date, setdate] = useState(null);
+  const [plusmoney, setplusmoney] = useState(null);
+  
+
 
   const [arrdis, setarrdis] = useState([]);
   const [arrmon, setarrmon] = useState([]);
@@ -245,6 +248,13 @@ const Page = () => {
 
     setarrdis(arrdesfilter);
     setarrmon(arrmoneyfilter);
+
+    setplusmoney(
+      arrmoneyfilter.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      )
+    );
   };
 
   const cheackoldarr = () => {};
@@ -542,7 +552,7 @@ const Page = () => {
               }}
             >
               <div className="col-4 text-center">
-                الاجمالي: <small className="text-danger">4546</small>
+                الاجمالي: <small className="text-danger">{plusmoney}</small>
               </div>
 
               <button
