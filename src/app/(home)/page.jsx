@@ -142,11 +142,11 @@ const Page = () => {
     };
 
     if (idcustomer) {
-      getData();
+      console.log("hoooommeeee");
     }
+    getData();
 
-    console.log("hoooommeeee");
-  }, [idcustomer]);
+  }, [today]);
 
   const searchuser = (value) => {
     console.log(value);
