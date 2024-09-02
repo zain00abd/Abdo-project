@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(94,142,215);
+  background: radial-gradient(circle, #003558 0%, #19526d 100%);
+}
+input::placeholder{
+  color: #c7c7c7;
+}
+
+/* Adding random numbers and operations to the background */
+.symbol {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 3rem; /* Size of the symbols */
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 40px;
+
+}
+
+.login-form h1 {
+  margin-bottom: 30px;
+  color: #dadada;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: transparent;
+  text-align: center;
+}
+
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 190px;
+
+
+}
+
+.form-group input:focus,
+.form-group input:valid {
+  border-color: #c8e9ff;
+  box-shadow: 0 0 50px rgb(34, 64, 95);
+}
+
+
+
+.form-group .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #2691d9;
+  width: 0;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+
+
+
+form button {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 12px;
+  font-size: 18px;
+  color: white;
+  background-image: linear-gradient(to right, #00779b , #009eb3 );
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+}
+
+form button:hover {
+
+  
+  background-image: linear-gradient(to right, #008597 , #008597 );
+}
+
+.suggestion p{
+  margin-bottom: 20px;
+  text-align: end;
+  color: #ffffff;
+}
+
+
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .login-container {
+      padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+      padding: 20px;
+  }
+
+
+}
